@@ -1,0 +1,20 @@
+[gd_scene load_steps=8 format=3 uid="uid://wdxs38ssxjxn"]
+
+[ext_resource type="Script" path="res://supertictactoe.gd" id="1_6ev8f"]
+[ext_resource type="PackedScene" uid="uid://bl6p5rmmnsh61" path="res://smallboard.tscn" id="2_plfd5"]
+[ext_resource type="PackedScene" uid="uid://ch0bqr3wr75rc" path="res://board.tscn" id="2_ylc6f"]
+[ext_resource type="PackedScene" uid="uid://b5x57mcfapp1j" path="res://small_circle.tscn" id="3_iui7y"]
+[ext_resource type="PackedScene" uid="uid://c1u82ho75ox5j" path="res://small_cross.tscn" id="4_0nxok"]
+[ext_resource type="PackedScene" uid="uid://dm7b52kvf7kai" path="res://knots.tscn" id="5_ryn0d"]
+[ext_resource type="PackedScene" uid="uid://cnq8uxa1yc885" path="res://cross.tscn" id="6_1fo8l"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_6ev8f")
+sub_grid_scene = ExtResource("2_plfd5")
+circle_scene_s = ExtResource("3_iui7y")
+cross_scene_s = ExtResource("4_0nxok")
+circle_scene_b = ExtResource("5_ryn0d")
+cross_scene_b = ExtResource("6_1fo8l")
+
+[node name="Board" parent="." instance=ExtResource("2_ylc6f")]
+position = Vector2(300, 300)

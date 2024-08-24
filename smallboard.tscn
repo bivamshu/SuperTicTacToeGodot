@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl6p5rmmnsh61"]
+
+[ext_resource type="Texture2D" uid="uid://d1yxlf6505bri" path="res://assets/grid.png" id="1_cet71"]
+
+[node name="smallboards" type="Sprite2D" groups=["small_boards"]]
+position = Vector2(98, 99)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_cet71")

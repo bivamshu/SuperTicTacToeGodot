@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwiyk0d3v5377"]
+
+[ext_resource type="Texture2D" uid="uid://cwhmfukd6mbjk" path="res://assets/nextplayergrid.jpg" id="1_r38fc"]
+
+[node name="nextPlayerBoard" type="Sprite2D"]
+position = Vector2(300, 301)
+texture = ExtResource("1_r38fc")

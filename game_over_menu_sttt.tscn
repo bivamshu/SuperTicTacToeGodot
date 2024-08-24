@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnw8eujqs5u5c"]
+
+[ext_resource type="Script" path="res://game_over_menu_sttt.gd" id="1_27s0n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svnyh"]
+bg_color = Color(0.314875, 0.597043, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.925659, 0.788982, 0.340211, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ft7v8"]
+bg_color = Color(0, 0.721655, 0.300748, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_27s0n")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -125.0
+offset_right = -76.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_svnyh")
+
+[node name="ResultLabel" type="Label" parent="."]
+offset_left = 166.5
+offset_top = 200.0
+offset_right = 333.5
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 40
+text = "Player 1 Wins 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 300.0
+offset_right = 425.0
+offset_bottom = 363.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_ft7v8")
+text = "Play Again"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

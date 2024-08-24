@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://coxp21uvissr1"]
+
+[ext_resource type="Script" path="res://game_over_menu.gd" id="1_osyad"]
+[ext_resource type="Script" path="res://RestartButton.gd" id="2_fuyrc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfr2o"]
+border_color = Color(0.982343, 0.982342, 0.982342, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_osyad")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -125.0
+offset_right = -76.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_rfr2o")
+
+[node name="ResultLabel" type="Label" parent="."]
+offset_left = 166.5
+offset_top = 200.0
+offset_right = 433.5
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 25
+text = "Player 1 Wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 300.0
+offset_right = 425.0
+offset_bottom = 363.0
+theme_override_font_sizes/font_size = 23
+text = "Play Again"
+script = ExtResource("2_fuyrc")
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

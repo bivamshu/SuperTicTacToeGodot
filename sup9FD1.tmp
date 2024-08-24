@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://wdxs38ssxjxn"]
+
+[ext_resource type="Script" path="res://supertictactoe.gd" id="1_6ev8f"]
+[ext_resource type="PackedScene" uid="uid://ch0bqr3wr75rc" path="res://board.tscn" id="2_ylc6f"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_6ev8f")
+sub_grid = ExtResource("2_ylc6f")
+
+[node name="Board" parent="." instance=ExtResource("2_ylc6f")]
+position = Vector2(300, 300)

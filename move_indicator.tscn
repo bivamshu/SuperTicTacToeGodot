@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxapsb6tvxp6b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lcmyy"]
+bg_color = Color(0.568627, 0, 0.0823529, 1)
+
+[node name="moveIndicator" type="Panel"]
+offset_right = 67.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lcmyy")
